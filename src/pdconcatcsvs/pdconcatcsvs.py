@@ -21,8 +21,9 @@ Example:
 	print('outfile: ', outfile)
 	ins=[pd.read_csv(f) for f in infiles]
 	tmp=pd.concat(ins)
+	# (TODO) fix '.' without path
 	os.makedirs(os.path.dirname(outfile), exist_ok=True)
-	tmp.to_csv(outfile)
+	tmp.to_csv(outfile, index=False)
 
 if __name__ == "__main__":
 	main()
