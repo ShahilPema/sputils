@@ -17,6 +17,8 @@ Concat CSV files.
 Example:
   pdconcatcsvs -o outfile.csv infile1.csv infile2.csv
 	"""
+	print('infiles: ', infiles)
+	print('outfile: ', outfile)
 	ins=[pd.read_csv(f) for f in infiles]
 	tmp=pd.concat(ins)
 	os.makedirs(os.path.dirname(outfile), exist_ok=True)
