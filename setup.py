@@ -7,7 +7,7 @@ import ast
 
 from setuptools import setup, find_packages
 
-DEPENDENCIES = ['click', 'importlib-metadata']
+DEPENDENCIES = ['click', 'importlib-metadata', 'pandas']
 EXCLUDE_FROM_PACKAGES = ["contrib", "docs", "tests*"]
 CURDIR = os.path.abspath(os.path.dirname(__file__))
 
@@ -44,7 +44,7 @@ setup(
     entry_points={
         "console_scripts": [
             "sputils=sputils.sputils:main", # main package
-            "tflsdevice=tflsdevice.tflsdevice:main",
+            "pdconcatcsvs=pdconcatcsvs.pdconcatcsvs:main",
             ],
         },
     url="https://github.com/ShahilPema/sputils",
