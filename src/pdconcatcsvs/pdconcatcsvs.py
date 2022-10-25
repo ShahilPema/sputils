@@ -7,9 +7,8 @@ import os
 
 CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
 @click.command(context_settings=CONTEXT_SETTINGS)
-@click.argument('infiles', type=click.Path(exists=True), required=True, nargs=-1, help='Infiles.')
+@click.argument('infiles', type=click.Path(exists=True), required=True, nargs=-1)
 @click.option('-o', '--outfile', type=click.Path(), required=True, help='Outfile.')
-@click.version_option()
 def main(infiles, outfile):
 	"""
 Concat CSV files.
