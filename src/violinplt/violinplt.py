@@ -11,8 +11,9 @@ CONTEXT_SETTINGS=dict(help_option_names=['-h', '--help'])
 @click.command(context_settings=CONTEXT_SETTINGS)
 @click.argument('infile', type=click.Path(exists=True), nargs=1)
 @click.option('-o', '--outdir', type=click.Path(exists=True), required=True, help='The output directory for violin plots')
+@click.option('-b', '--bname', type=click.Path(), required=True, help='Bname.')
 @click.option('-v', '--verbose', is_flag=True, help='Verbose.')
-def main(infile, outdir, verbose):
+def main(infile, outdir, bname, verbose):
 	"""
 Create a violin plot for given samples.
 
@@ -31,7 +32,7 @@ Authors: Shahil Pema <pemashahil@yahoo.com>
 	exprs=[
 	f"infile='{infile}'",
 	f"outdir='{outdir}'",
-	f"outfile='{filename}.pdf'"
+	f"bname='{bname}_dfviolin.pdf'"
 	]
 	return exeR.callback(exprs, script=script, condaenv='', verbose=True)
 

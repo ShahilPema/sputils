@@ -45,7 +45,8 @@ setup(
         "console_scripts": [
             "sputils=sputils.sputils:main", # main package
             "pdconcatcsvs=pdconcatcsvs.pdconcatcsvs:main",
-            "violinplt=violinplt.violinplt:main"
+            "violinplt=violinplt.violinplt:main",
+            "csv2tsv=csv2tsv.csv2tsv:main"
             ],
         },
     url="https://github.com/ShahilPema/sputils",

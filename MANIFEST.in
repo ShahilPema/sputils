@@ -1,5 +1,6 @@
 include *.md LICENSE
-graft R
+
+global-include *.R
 
 exclude .flake8 noxfile.py .coveragerc
 prune tests
