@@ -46,8 +46,9 @@ setup(
             "sputils=sputils.sputils:main", # main package
             "pdconcatcsvs=pdconcatcsvs.pdconcatcsvs:main",
             "violinplt=violinplt.violinplt:main",
-            "csv2tsv=csv2tsv.csv2tsv:main"
-            ],
+            "csv2tsv=csv2tsv.csv2tsv:main",
+            "h5adconttable=h5adconttable.h5adconttable:main"
+	],
         },
     url="https://github.com/ShahilPema/sputils",
     version=get_version(),
